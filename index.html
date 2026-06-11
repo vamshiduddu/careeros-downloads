@@ -110,9 +110,19 @@
           <span class="os">🐧 Linux</span><span class="ext">.deb (Debian/Ubuntu)</span>
         </a>
 
+        <ol class="steps" style="margin-top:20px">
+          <li><strong>macOS</strong> — open the <code>.dmg</code> and drag <strong>CareerOS</strong> into <strong>Applications</strong>.</li>
+          <li>Open <strong>Terminal</strong> and run:<br><code>xattr -cr /Applications/CareerOS.app</code></li>
+          <li>Launch CareerOS from Applications. Done.</li>
+        </ol>
+
         <div class="note">
+          <strong>Why the Terminal step?</strong> The macOS build isn't yet Apple-notarized, so macOS may show
+          <em>"CareerOS is damaged and can't be opened"</em>. The <code>xattr -cr</code> command clears the
+          quarantine flag — it does <strong>not</strong> modify the app. Right-click → <em>Open</em> alone will
+          not fix the "damaged" message.
+          <br><br>
           <strong>Windows:</strong> if SmartScreen warns, click <em>More info → Run anyway</em>.
-          <strong>macOS:</strong> right-click the app → <em>Open</em> to bypass Gatekeeper on first launch (build is unsigned).
         </div>
       </section>
 
